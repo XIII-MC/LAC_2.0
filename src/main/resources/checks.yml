@@ -1,0 +1,418 @@
+#LAC V2 'checks.yml' configuration file:
+#Last update: 14/07/2022 | 10:00
+
+# Check Definition/Explanations.
+# Current State: Check's State, Stability
+Check A: #Check = Check name | A = Check type. Changing this WILL break the config, check and might return console errors.
+  silent: true #Must be BOOLEAN | Toggles setback for the check.
+  enabled: false #Must be BOOLEAN | Toggles check activity.
+  Buffer:
+    addBuffer: 0 #Must be NUMBER | Number added to buffer.
+    maxBuffer: 0 #Must be NUMBER | Maximum value for buffer before sending alerts.
+    removeBuffer: 0 #Must be NUMBER | Number removed from buffer.
+  Punishments:
+    kick: false
+    ban: false #Must be BOOLEAN | Allows LAC to kick the player when his VL goes above the maximum punishVL. #Must be BOOLEAN | Allows LAC to ban the player when his VL goes above the maximum punishVL (Will ban for 'Rule Breaking' by default.)
+    punishVL: 0 #Must be NUMBER | Maximum punishVL before being punished.
+  Messages:
+    broadcastPunish: false #Must be BOOLEAN | Allows or not to broadcast a message saying "XXX goes removed for Unfair Advantage.", can be changed in 'config.yml'.
+
+#Fly A:
+
+# Type: Fly
+# Info: Prediction fly
+# Made: 14/07/2022
+
+Fly A:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 3
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Fly B:
+
+# Type: Fly
+# Info: Prediction fly
+# Made: 14/07/2022
+
+Fly B:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 2
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Fly C:
+
+# Type: Fly
+# Info: Prediction fly
+# Made: 14/07/2022
+
+Fly C:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 2
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Fly D:
+
+# Type: Fly
+# Info: Prediction fly
+# Made: 14/07/2022
+
+Fly D:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 3
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Fly E:
+
+# Type: Fly
+# Info: vClip upwards
+# Made: 14/07/2022
+
+Fly E:
+  silent: false
+  enabled: true
+  Buffer:
+    addBuffer: 0
+    maxBuffer: 0
+    removeBuffer: 0
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Fly F:
+
+# Type: Fly
+# Info: vClip downwards
+# Made: 14/07/2022
+
+Fly F:
+  silent: false
+  enabled: true
+  Buffer:
+    addBuffer: 0
+    maxBuffer: 0
+    removeBuffer: 0
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Ground A:
+
+# Type: NoFall
+# Info: Ground state checker
+# Made: 14/07/2022
+
+Ground A:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 1
+    removeBuffer: 0.15
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Ground B:
+
+# Type: NoFall
+# Info: FallDistance comparator
+# Made: 14/07/2022
+
+Ground B:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 3
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#OmniSprint A:
+
+# Type: OmniSprint
+# Info: Invalid sprint directions
+# Made: 14/07/2022
+
+OmniSprint A:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 6
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Speed A:
+
+# Type: Speed
+# Info: Speed prediction
+# Made: 14/07/2022
+
+Speed A:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 1
+    removeBuffer: 0.15
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Speed B:
+
+# Type: Speed
+# Info: Speed limit
+# Made: 14/07/2022
+
+Speed B:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 6
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Speed C:
+
+# Type: Speed
+# Info: Rounded speed
+# Made: 14/07/2022
+
+Speed C:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 3
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Speed D:
+
+# Type: Invalid
+# Info: Impossible teleportation
+# Made: 14/07/2022
+
+Speed D:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 0
+    maxBuffer: 0
+    removeBuffer: 0
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Speed E:
+
+# Type: Strafe
+# Info: Strafe in air
+# Made: 14/07/2022
+
+Speed E:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 3.35
+    removeBuffer: 0.35
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Speed F:
+
+# Type: LowJump
+# Info: Jump prediction
+# Made: 14/07/2022
+
+Speed F:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 0
+    maxBuffer: 0
+    removeBuffer: 0
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Step A:
+
+# Type: Step
+# Info: Missing airTicks
+# Made: 14/07/2022
+
+Step A:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 1
+    removeBuffer: 0.1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Step B:
+
+# Type: Step
+# Info: Added airTicks
+# Made: 14/07/2022
+
+Step B:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 4
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#Step C:
+
+# Type: Motion
+# Info: Repeated yMotion
+# Made: 14/07/2022
+
+Step C:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 4
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true
+
+#BadPacket X:
+
+# Type: Timer
+# Info: Sent more packets
+# Made: 14/07/2022
+
+BadPacket X:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 2
+    removeBuffer: 0.25
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 30
+  Messages:
+    broadcastPunish: true
+
+#FastClimb A:
+
+# Type: FastClimb
+# Info: Climbing too fast
+# Made: 14/07/2022
+
+FastClimb A:
+  silent: true
+  enabled: true
+  Buffer:
+    addBuffer: 1
+    maxBuffer: 6
+    removeBuffer: 1
+  Punishments:
+    kick: true
+    ban: false
+    punishVL: 8
+  Messages:
+    broadcastPunish: true

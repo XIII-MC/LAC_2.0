@@ -1,0 +1,12 @@
+name: LAC
+version: '${project.version}'
+main: com.xiii.libertycity.lac.LAC
+prefix: LAC
+authors: [ XIII___ ]
+description: LibertyCity's Anti-Cheat (2.0)
+commands:
+  lac:
+    description: LAC main command.
+    usage: /lac
+    permission: LibertyCity.LAC.main
+    permission-message: §e§lLAC §8»»§c Permission Insuffisante.
